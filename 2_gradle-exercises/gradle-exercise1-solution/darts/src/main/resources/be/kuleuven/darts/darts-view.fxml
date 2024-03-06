@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.kuleuven.darts.DartsController">
+   <children>
+      <Circle fx:id="circleBig" fill="DODGERBLUE" layoutX="188.0" layoutY="178.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="circleMiddle" fill="#40ff1f" layoutX="188.0" layoutY="178.0" radius="66.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="circleSmall" fill="#ff1f1f" layoutX="188.0" layoutY="178.0" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+      <TextField fx:id="playerTextField" layoutX="347.0" layoutY="53.0" promptText="Put your name here" />
+      <Label layoutX="347.0" layoutY="95.0" prefHeight="83.0" prefWidth="149.0" text="Fil in your name above and click the dartsbord, winner is displayed below" wrapText="true" />
+      <Label fx:id="winnerLbl" layoutX="347.0" layoutY="236.0" text="Winner Label" />
+   </children>
+</AnchorPane>

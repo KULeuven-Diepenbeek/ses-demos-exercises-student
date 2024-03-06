@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'be.kuleuven'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+//    flatDir {
+//        dirs 'lib' //Werkt niet met transitieve dependency Gson
+//    }
+    maven {
+        url = "C:\\Users\\u0158802\\development\\java\\maven-repo"
+    }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'be.kuleuven:scorebord:1.0-SNAPSHOT'
+}
+
+test {
+    useJUnitPlatform()
+}
