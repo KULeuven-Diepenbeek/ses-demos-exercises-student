@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'be.kuleuven'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    // toevoegen!
+    maven {
+        url = "C:\\Users\\u0158802\\development\\java\\maven-repo"
+    }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation 'be.kuleuven:dm-creatingLibrary:1.0'
+}
+
+test {
+    useJUnitPlatform()
+}

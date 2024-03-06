@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+group = 'be.kuleuven'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    // 1) setup local jar file
+//    flatDir {
+//        dirs 'lib'
+//    }
+
+    // 2) setup the maven repo local
+//    maven {
+//        // dit kan zowel een folder als HTTP(s) URL zijn
+//        url "C:\\Users\\u0158802\\development\\java\\maven-repo"
+//    }
+
+    // 3) setup the maven repo web
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // 1) from local jar file
+    // 1.1) directly provide path to jar file
+    //implementation files('libs/gson-2.9.0.jar')
+    // 1.2) via repository reference in project self
+    //implementation 'com.google.code.gson:gson:2.9.0'
+
+    // 2) from the maven repo local
+    //implementation 'com.google.code.gson:gson:2.9.0'
+
+    // 3) from the maven repo web
+    implementation 'com.google.code.gson:gson:2.9.0'
+}
+
+test {
+    useJUnitPlatform()
+}

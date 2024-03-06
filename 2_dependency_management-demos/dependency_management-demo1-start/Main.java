@@ -1,0 +1,6 @@
+public class Main {
+    public static void main(String[] args) {
+        Gson gson = new Gson();
+        System.out.println(gson.toJson(1));
+    }
+}
