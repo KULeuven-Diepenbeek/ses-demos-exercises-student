@@ -11,12 +11,6 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    flatDir {
-        dirs 'libs'
-    }
-//    maven {
-//        url "C:\\Users\\u0158802\\development\\java\\maven-repo"
-//    }
 }
 
 ext {
@@ -31,8 +25,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'be.kuleuven.darts'
-    mainClass = 'be.kuleuven.darts.HelloApplication'
+    mainModule = 'be.kuleuven.candycrush'
+    mainClass = 'be.kuleuven.candycrush.HelloApplication'
 }
 
 javafx {
@@ -42,7 +36,6 @@ javafx {
 
 dependencies {
     implementation('org.controlsfx:controlsfx:11.1.2')
-    implementation('be.kuleuven:scorebord:1.0-SNAPSHOT')
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
