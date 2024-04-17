@@ -1,8 +1,8 @@
-package org.example;
+package streams.examples;
 
 import java.util.List;
 
-public class Lazyness {
+public class Laziness {
     public static void main(String[] args) {
         var list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 

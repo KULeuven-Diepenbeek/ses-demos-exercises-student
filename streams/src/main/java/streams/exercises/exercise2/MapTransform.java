@@ -1,4 +1,4 @@
-package org.example;
+package streams.exercises.exercise2;
 
 import java.util.Map;
 import java.util.function.Function;

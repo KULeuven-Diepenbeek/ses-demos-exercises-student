@@ -1,9 +1,6 @@
-package org.example;
+package streams.examples;
 
-import java.util.Collections;
-import java.util.function.Function;
 import java.util.stream.IntStream;
-import java.util.stream.StreamSupport;
 
 public class MapMultiDemo {
 

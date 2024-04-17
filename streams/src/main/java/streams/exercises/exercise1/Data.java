@@ -1,4 +1,4 @@
-package org.example;
+package streams.exercises.exercise1;
 
 import java.util.Collections;
 import java.util.List;
