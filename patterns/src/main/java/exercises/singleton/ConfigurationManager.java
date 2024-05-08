@@ -4,9 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ConfigurationManager {
+    public static final
+    ConfigurationManager INSTANCE =
+            new ConfigurationManager();
+
     private Map<String, String> settings;
 
-    public ConfigurationManager() {
+    private ConfigurationManager() {
         settings = new HashMap<>();
         loadSettings();
     }

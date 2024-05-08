@@ -3,12 +3,10 @@ package exercises.singleton;
 import java.util.List;
 
 public class UI {
-    private final ConfigurationManager config;
     private final List<UIWidget> widgets;
 
-    public UI(ConfigurationManager config) {
-        this.config = config;
-        this.widgets = List.of(new UIWidget(config));
+    public UI() {
+        this.widgets = List.of(new UIWidget());
     }
 
     public void show() {
