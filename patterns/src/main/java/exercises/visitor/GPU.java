@@ -9,6 +9,14 @@ class GPU implements HardwareComponent {
         this.memory = memory;
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public int getMemory() {
+        return memory;
+    }
+
     @Override
     public void display() {
         System.out.println("GPU Model: " + model + ", Memory: " + memory + "GB");

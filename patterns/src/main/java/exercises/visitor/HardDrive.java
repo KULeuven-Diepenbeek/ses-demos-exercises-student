@@ -9,6 +9,14 @@ class HardDrive implements HardwareComponent {
         this.capacity = capacity;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
     @Override
     public void display() {
         System.out.println("Hard Drive Type: " + type + ", Capacity: " + capacity + "GB");

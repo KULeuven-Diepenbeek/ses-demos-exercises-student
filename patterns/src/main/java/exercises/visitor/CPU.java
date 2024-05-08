@@ -9,6 +9,14 @@ class CPU implements HardwareComponent {
         this.cores = cores;
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public int getCores() {
+        return cores;
+    }
+
     @Override
     public void display() {
         System.out.println("CPU Model: " + model + ", Cores: " + cores);
