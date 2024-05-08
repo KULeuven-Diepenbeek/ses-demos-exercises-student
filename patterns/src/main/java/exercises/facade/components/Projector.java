@@ -1,8 +1,8 @@
 package exercises.facade.components;
 
-class Projector {
-    void on() { System.out.println("Projector on."); }
-    void off() { System.out.println("Projector off."); }
-    void setInputDVD() { System.out.println("Projector input set to DVD."); }
+public class Projector {
+    public void on() { System.out.println("Projector on."); }
+    public void off() { System.out.println("Projector off."); }
+    public void setInputDVD() { System.out.println("Projector input set to DVD."); }
 }
 

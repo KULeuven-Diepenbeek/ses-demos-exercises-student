@@ -1,15 +1,15 @@
 package exercises.facade.components;
 
-class SurroundSoundSystem {
-    void on() {
+public class SurroundSoundSystem {
+    public void on() {
         System.out.println("Surround sound on.");
     }
 
-    void off() {
+    public void off() {
         System.out.println("Surround sound off.");
     }
 
-    void setVolume(int level) {
+    public void setVolume(int level) {
         System.out.println("Volume set to " + level);
     }
 }

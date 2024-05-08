@@ -1,15 +1,15 @@
 package exercises.facade.components;
 
-class DVDPlayer {
-    void on() {
+public class DVDPlayer {
+    public void on() {
         System.out.println("DVD player on.");
     }
 
-    void off() {
+    public void off() {
         System.out.println("DVD player off.");
     }
 
-    void play() {
+    public void play() {
         System.out.println("DVD playing.");
     }
 }

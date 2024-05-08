@@ -1,11 +1,11 @@
 package exercises.facade.components;
 
-class Screen {
-    void down() {
+public class Screen {
+    public void down() {
         System.out.println("Screen down.");
     }
 
-    void up() {
+    public void up() {
         System.out.println("Screen up.");
     }
 }
