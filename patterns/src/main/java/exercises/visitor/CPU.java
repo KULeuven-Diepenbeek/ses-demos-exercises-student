@@ -18,12 +18,8 @@ class CPU implements HardwareComponent {
     }
 
     @Override
-    public void display() {
-        System.out.println("CPU Model: " + model + ", Cores: " + cores);
+    public void accept(ComponentVisitor visitor) {
+        visitor.visitCPU(this);
     }
 
-    @Override
-    public void checkHealth() {
-        System.out.println("Checking CPU health...");
-    }
 }

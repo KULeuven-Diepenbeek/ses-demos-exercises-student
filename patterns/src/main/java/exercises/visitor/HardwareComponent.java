@@ -1,7 +1,6 @@
 package exercises.visitor;
 
 interface HardwareComponent {
-    void checkHealth();
-    void display();
+    void accept(ComponentVisitor visitor);
 }
 

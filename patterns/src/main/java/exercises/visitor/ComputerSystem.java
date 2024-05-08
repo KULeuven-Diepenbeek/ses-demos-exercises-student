@@ -24,16 +24,8 @@ public class ComputerSystem implements HardwareComponent {
     }
 
     @Override
-    public void checkHealth() {
-        cpu.checkHealth();
-        gpu.checkHealth();
-        hd.checkHealth();
+    public void accept(ComponentVisitor visitor) {
+        visitor.visitSystem(this);
     }
 
-    @Override
-    public void display() {
-        cpu.display();
-        gpu.display();
-        hd.display();
-    }
 }

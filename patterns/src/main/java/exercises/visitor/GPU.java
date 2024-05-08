@@ -18,12 +18,7 @@ class GPU implements HardwareComponent {
     }
 
     @Override
-    public void display() {
-        System.out.println("GPU Model: " + model + ", Memory: " + memory + "GB");
-    }
-
-    @Override
-    public void checkHealth() {
-        System.out.println("Checking GPU health...");
+    public void accept(ComponentVisitor visitor) {
+        visitor.visitGPU(this);
     }
 }

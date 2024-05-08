@@ -18,12 +18,7 @@ class HardDrive implements HardwareComponent {
     }
 
     @Override
-    public void display() {
-        System.out.println("Hard Drive Type: " + type + ", Capacity: " + capacity + "GB");
-    }
-
-    @Override
-    public void checkHealth() {
-        System.out.println("Checking harddrive health...");
+    public void accept(ComponentVisitor visitor) {
+        visitor.visitHarddrive(this);
     }
 }
