@@ -7,10 +7,8 @@ import exercises.facade.components.SurroundSoundSystem;
 
 public class Main {
     public static void main(String[] args) {
-        /*
-        HomeTheaterFacade homeTheater = new HomeTheaterFacade(new Projector(), new DVDPlayer(), new SurroundSoundSystem(), new Screen());
+        HomeTheaterFacade homeTheater = new HomeTheaterFacade();
         homeTheater.watchMovie("Inception");
         homeTheater.endMovie();
-        */
     }
 }
