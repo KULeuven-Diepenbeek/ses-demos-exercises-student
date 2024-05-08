@@ -1,24 +1,30 @@
 package exercises.observer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class WeatherData {
     private double temperature;
     private double humidity;
     private double pressure;
 
-    private CurrentConditionsDisplay currentDisplay;
-    private StatisticsDisplay statisticsDisplay;
-    private ForecastDisplay forecastDisplay;
+    private List<WeatherObserver> observers = new ArrayList<>();
 
-    public WeatherData(CurrentConditionsDisplay currentDisplay, StatisticsDisplay statisticsDisplay, ForecastDisplay forecastDisplay) {
-        this.currentDisplay = currentDisplay;
-        this.statisticsDisplay = statisticsDisplay;
-        this.forecastDisplay = forecastDisplay;
+    public WeatherData() {
+    }
+
+    public void addObserver(WeatherObserver observer) {
+        observers.add(observer);
+    }
+
+    public void removeObserver(WeatherObserver observer) {
+        observers.remove(observer);
     }
 
     public void measurementsChanged() {
-        currentDisplay.update(temperature, humidity, pressure);
-        statisticsDisplay.update(temperature, humidity, pressure);
-        forecastDisplay.update(temperature, humidity, pressure);
+        for (var observer : observers) {
+            observer.update(temperature, humidity, pressure);
+        }
     }
 
     public void setMeasurements(double temperature, double humidity, double pressure) {

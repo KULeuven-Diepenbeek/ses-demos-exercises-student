@@ -5,11 +5,10 @@ public class Main {
         CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay();
         ForecastDisplay forecastDisplay = new ForecastDisplay();
         StatisticsDisplay statisticsDisplay = new StatisticsDisplay();
-        WeatherData data = new WeatherData(
-                currentDisplay,
-                statisticsDisplay,
-                forecastDisplay
-        );
+        WeatherData data = new WeatherData();
+        data.addObserver(currentDisplay);
+        data.addObserver(forecastDisplay);
+        data.addObserver(statisticsDisplay);
 
         data.setMeasurements(21, 45, 103);
     }
